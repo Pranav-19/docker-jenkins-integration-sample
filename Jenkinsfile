@@ -10,7 +10,7 @@ node {
     stage('Build image') {
         /* This builds the actual image */
 
-        app = docker.build("pranava19/docker-jenkins-integration-sample")
+        app = docker.build("pranava19/docker-jenkins-integration-sample","--pull=true")
     }
 
     stage('Test image') {
